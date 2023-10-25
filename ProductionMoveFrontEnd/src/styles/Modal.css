@@ -1,0 +1,110 @@
+.custom-modal-container {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(200, 200, 200, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.custom-modal-container .modal-show {
+  -webkit-animation: fadeDown 0.3s linear;
+          animation: fadeDown 0.3s linear;
+}
+.custom-modal-container .modal-hide {
+  -webkit-animation: fadeUp 0.3s linear;
+          animation: fadeUp 0.3s linear;
+}
+.custom-modal-container .modal-content {
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.custom-modal-container .modal-content .modal-header {
+  border-bottom: 1px solid #dee2e6;
+  margin: 0 1rem;
+}
+.custom-modal-container .modal-content .modal-header .modal-title {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.custom-modal-container .modal-content .modal-header .modal-close {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+.custom-modal-container .modal-content .modal-header .modal-close:hover {
+  color: red;
+}
+.custom-modal-container .modal-content .modal-body {
+  border-bottom: 1px solid #dee2e6;
+  position: relative;
+  padding: 1rem;
+}
+.custom-modal-container .modal-content .modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal-container .modal-content .modal-footer > button {
+  margin: 10px 25px;
+  min-width: 100px;
+}
+
+@-webkit-keyframes fadeDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=Modal.css.map */

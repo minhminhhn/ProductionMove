@@ -1,0 +1,105 @@
+.custom-modal-container {
+    width           : 100vw;
+    height          : 100vh;
+    top             : 0;
+    left            : 0;
+    background-color: rgba(200, 200, 200, 0.8);
+    position        : fixed;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    z-index         : 999;
+
+    .modal-show {
+        animation: fadeDown 0.3s linear;
+    }
+
+    .modal-hide {
+        animation: fadeUp 0.3s linear;
+    }
+
+    .modal-content {
+        width                : 50%;
+        position             : absolute;
+        top                  : 10%;
+        border-radius        : 12px;
+        background-color     : white;
+        box-shadow           : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display              : flex;
+        flex-direction       : column;
+        padding              : 0;
+        // animation-duration: 4s;
+
+        .modal-header {
+
+            border-bottom: 1px solid #dee2e6;
+            margin       : 0 1rem;
+
+            .modal-title {
+                display      : inline-block;
+                text-align   : center;
+                margin-bottom: 0px;
+                font-size    : 1.25rem;
+                font-weight  : 600;
+            }
+
+            .modal-close {
+                display               : flex;
+                justify-content       : flex-end;
+                background-color      : transparent;
+                border                : none;
+                font-size             : 2rem;
+                cursor                : pointer;
+                // border-radius   : 20%;
+                font-weight           : 800;
+                // transform          : translateY(-25%);
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+
+        .modal-body {
+            border-bottom: 1px solid #dee2e6;
+            position     : relative;
+            padding      : 1rem;
+
+        }
+
+        .modal-footer {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            >button {
+                margin   : 10px 25px;
+                min-width: 100px;
+            }
+        }
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-50%);
+        opacity  : 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity  : 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(0%);
+        opacity  : 1;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity  : 0;
+    }
+}

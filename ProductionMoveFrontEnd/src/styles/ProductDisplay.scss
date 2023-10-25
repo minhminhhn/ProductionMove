@@ -1,0 +1,36 @@
+.product-detail-container {
+    .product-detail {}
+
+    .product-history {
+        ul.timeline {
+            margin : 0;
+            padding: 1rem 2rem;
+
+            li.moment {
+                position      : relative;
+                border-left   : 2px solid yellow;
+                padding-left  : 1rem;
+                padding-bottom: 1rem;
+
+                .moment-title {
+                    font-size: 1.2rem;
+                    margin   : 0;
+                }
+
+                &::before {
+                    content            : '';
+                    display            : block;
+                    position           : absolute;
+                    width              : 0.8rem;
+                    height             : 0.8rem;
+                    background-color   : green;
+                    border-radius      : 50%;
+                    // left            : -50%;
+                    top                : 0%;
+                    transform          : translate(calc(-50% - 1px), 50%);
+                    left               : 0;
+                }
+            }
+        }
+    }
+}

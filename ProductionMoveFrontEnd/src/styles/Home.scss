@@ -1,0 +1,200 @@
+.homeContainer {
+    color: rgb(247, 247, 247);
+
+    // general
+    .center {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        max-width: 35px;
+        height   : auto;
+    }
+
+    // components
+    .navBar,
+    .bannerContainer,
+    .featureContainer {
+        margin-bottom: 24px;
+    }
+
+    .navBar {
+        width : 100%;
+        height: 70px;
+
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        padding    : 10px;
+        padding-top: 50px;
+
+        position: fixed;
+        z-index : 0;
+
+        .home,
+        .logoContainer,
+        .loginBtn {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            width          : 120px;
+        }
+
+        .home {
+            &:hover {
+                cursor: default;
+            }
+        }
+
+        .logoContainer {
+            &>.logo:hover {
+                filter   : drop-shadow(0 0 0.75rem white);
+                transform: scale(1.5);
+            }
+        }
+
+        .loginBtn {
+            color: rgba(255, 255, 255, 0.9);
+
+            width: 100px;
+
+            &:hover {
+                color     : rgba(255, 255, 255, 1);
+                box-shadow: 0 5px 15px rgba(217, 219, 232, 0.4);
+            }
+        }
+    }
+
+    .onscroll {
+        transition      : all 1s ease;
+        padding-top     : 0;
+        border-radius   : 4px;
+        backdrop-filter : blur(10px);
+        background-color: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+        box-shadow      : rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .bannerContainer {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        .banner {
+            width        : 100%;
+            height       : auto;
+            border-radius: 8px;
+            top          : 10px;
+        }
+    }
+
+    .featureContainer {
+        margin: 20px;
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            display: inline-block;
+            width  : 50%;
+            padding: 0 24px;
+
+            img {
+                display      : block;
+                margin       : 0 auto;
+                border-radius: 50%;
+                width        : 150px;
+                height       : auto;
+            }
+
+            .feature-name {
+                font-size  : 0.9rem;
+                padding-top: 4px;
+            }
+
+            .feature-description {
+                font-size  : 0.65rem;
+                padding-top: 7px;
+                text-align : justify;
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .featureContainer {
+            min-height     : 500px;
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-evenly;
+
+            .feature {
+                width: 25%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .featureContainer {
+            min-height     : 500px;
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-evenly;
+
+            .feature {
+                width: 25%;
+            }
+        }
+    }
+
+    .footerContainer {
+        background-color: #ccc;
+
+        .column {
+            display: inline-block;
+            padding: 20px;
+            margin : 10px;
+
+            &.left {
+                .left-info {
+                    display       : flex;
+                    flex-direction: column;
+
+                    &>* {
+                        padding: 4px 0;
+                    }
+
+                    margin-bottom: 20px;
+                }
+
+                .left-subscribe {
+                    padding: 12px 0;
+                }
+
+                input {
+                    display      : block;
+                    border-radius: 4px;
+                    padding      : 4px;
+                    margin-top   : 4px;
+                    border       : #fff;
+                    width        : 260px;
+                }
+            }
+
+            &.right {
+                position: absolute;
+                right   : 5%;
+
+                >* {
+                    display: block;
+                }
+            }
+        }
+    }
+}
